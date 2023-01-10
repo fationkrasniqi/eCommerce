@@ -8,12 +8,19 @@ import { Buy } from "../../styles/ProductDetails";
 import {AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai';
 import { useStateContext } from "../../lib/context";
 import toast from 'react-hot-toast';
-
+import { useEffect } from "react";
 
 
 export default  function ProductDetails(){
       //UseState
-    const {qty, increaseQty, decreaseQty,cartItems, onAdd} = useStateContext();
+    const {qty, increaseQty, decreaseQty,cartItems, onAdd, setQty} = useStateContext();
+
+    //Reset Qty
+
+    useEffect(()=> {
+        setQty(1);
+    },[])
+
     //Fetch Slug
     const {query} = useRouter();
      //Fetch Graphql data

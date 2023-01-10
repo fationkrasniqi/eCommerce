@@ -3,6 +3,7 @@ import Image from 'next/image';
 import test from '../public/test1.png';
 import styled from 'styled-components';
 
+
 const {motion} =  require('framer-motion')
 
  const stripe = require('stripe')(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
@@ -23,7 +24,7 @@ export default function Success({order}){
    const route = useRouter();
    console.log(order)
    return(
-    <Wrapper>
+    <Wrapper className="test">
         <Card 
          animate={{opacity:1, scale: 1}}
          initial={{opacity: 0, scale: 0.75}}
@@ -65,6 +66,15 @@ export default function Success({order}){
 
 const Wrapper = styled.div`
          margin: 1rem 13rem;
+    
+         @media (max-width: 767px) {
+            margin: 1rem -2rem;
+         }
+
+         @media (max-width: 1275px) {
+            margin: 1rem -3rem
+         }
+         
 `;
 
 const Card = styled(motion.div)`
@@ -74,6 +84,9 @@ const Card = styled(motion.div)`
     background: white;
     border-radius: 2rem;
     padding: 3rem;
+
+  
+    
 
     h2{
         margin: 0.5rem 0rem;
