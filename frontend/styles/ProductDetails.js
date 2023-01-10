@@ -34,6 +34,17 @@ button{
    
 }
 
+@media (max-width: 750px) {
+    button{
+    background: transparent;
+    border: none;
+    display: flex;
+    font-size: 1.5rem;
+    padding: 0rem 0rem 0rem 0rem;
+   
+}
+}
+
 p{
     width: 1rem;
     text-align: center;

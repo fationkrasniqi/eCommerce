@@ -22,6 +22,14 @@ background: #f1f1f1;
 padding: 2rem 5rem;
 overflow-y: scroll;
 position: relative;
+@media (max-width: 767px) {
+    width: 40%;
+
+}
+
+@media (max-width: 1275px) {
+    width: 70%;
+}
 
 `;
 
@@ -35,9 +43,34 @@ background: white;
 padding: 2rem;
 margin: 2rem 0rem;
 
+
+
 img{
     width: 6rem;
 }
+
+@media (max-width: 767px) {
+    img{
+      
+        
+    width: 10rem;
+   
+  
+
+}
+}
+
+@media (max-width: 767px) {
+display: grid;
+align-items: center;
+justify-content: space-between;
+border-radius: 1rem;
+overflow: hidden;
+background: white;
+padding: 0.4rem;
+margin: 2rem -2rem;
+}
+
 `
 
 export const CardInfo = styled(motion.div)`
